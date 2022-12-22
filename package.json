@@ -1,8 +1,13 @@
 {
     "name": "Test",
-    "description": "A Node-RED Project",
+    "description": "OPC UA Server Simulation",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-counter": "0.1.6",
+        "node-red-contrib-opcua-server": "1.1.1",
+        "node-red-dashboard": "3.1.7",
+        "node-red-node-random": "0.4.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",

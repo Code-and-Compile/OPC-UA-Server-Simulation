@@ -1,0 +1,908 @@
+[
+    {
+        "id": "27717c2.72cc384",
+        "type": "tab",
+        "label": "OPCUA Server",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "13870b2a.9abfd5",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b368d1e3.84c1b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6bacea38.3ddc44",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "OPC UA Server with Node-RED Variables",
+        "info": "",
+        "x": 200,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cf08ff3a.320d4",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "Writing to Simulated Variables",
+        "info": "",
+        "x": 160,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ae1b0dac.94e9f",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "To flow variables I2",
+        "func": "flow.set('Input2', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ec2d7a7.1663b8",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I2: Random Integer",
+        "info": "",
+        "x": 990,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7e340ccc.f5d054",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "372b7352.897bec"
+            ]
+        ]
+    },
+    {
+        "id": "28d7300a.ef135",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 550,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "bb1d0f85.b77b",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I3: Random Float",
+        "info": "",
+        "x": 980,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5012c846.9a48b8",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "44269e84.e053b"
+            ]
+        ]
+    },
+    {
+        "id": "506287c7.f9c098",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 750,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6c283493.ddba2c",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "func": "//Reduce the decimal limit\nmsg.payload = msg.payload.toFixed(2);\n//Convert the string to number\nmsg.payload = Number(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "506287c7.f9c098",
+                "3668acf1.b579a4"
+            ]
+        ]
+    },
+    {
+        "id": "c4de226c.5a85f",
+        "type": "counter",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": "0",
+        "upper": "100",
+        "mode": "increment",
+        "outputs": "1",
+        "x": 360,
+        "y": 620,
+        "wires": [
+            [
+                "7edfa112.60a58",
+                "b0b5123f.f1a44",
+                "62b27f98.46529"
+            ]
+        ]
+    },
+    {
+        "id": "aa85784a.7bc6b8",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "c4de226c.5a85f"
+            ]
+        ]
+    },
+    {
+        "id": "7edfa112.60a58",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "count",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b0b5123f.f1a44",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "func": "var x = msg.count;\nif (x == 100)\n{\n    msg.reset = true;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 680,
+        "wires": [
+            [
+                "c4de226c.5a85f"
+            ]
+        ]
+    },
+    {
+        "id": "a1a4eb91.cb3e78",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I4: Counter 0 - 100",
+        "info": "",
+        "x": 990,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "43e1d331.220a6c",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "60af2bc6.afd6d4"
+            ]
+        ]
+    },
+    {
+        "id": "60af2bc6.afd6d4",
+        "type": "trigger",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "1",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 360,
+        "y": 860,
+        "wires": [
+            [
+                "c080b86b.047648",
+                "127ff88f.060527"
+            ]
+        ]
+    },
+    {
+        "id": "c080b86b.047648",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2c153d46.fb9f12",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I7: Toggle boolean",
+        "info": "",
+        "x": 990,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "f970da7a.dd5d78",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "String",
+        "info": "",
+        "x": 90,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "e6dc0620.6f3848",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1060,
+        "wires": [
+            [
+                "e1e1a74a.8fcd18"
+            ]
+        ]
+    },
+    {
+        "id": "e1e1a74a.8fcd18",
+        "type": "counter",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": "0",
+        "upper": "100",
+        "mode": "increment",
+        "outputs": "1",
+        "x": 360,
+        "y": 1060,
+        "wires": [
+            [
+                "3aa01fb4.a58eb",
+                "811cbf86.6fbdd"
+            ]
+        ]
+    },
+    {
+        "id": "811cbf86.6fbdd",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "func": "var x = msg.count;\nif (x == 1)\n{\n    msg.payload = \"Code and Compile\";\n    return msg;\n}\n\nif (x == 3)\n{\n    msg.payload = \"Learning made easy\";\n    return msg;\n}\n\nif (x == 5)\n{\n    msg.payload = \"www.codeandcompile.com\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 1060,
+        "wires": [
+            [
+                "9efe8fd6.0e3ff",
+                "bf26b712.0ad878"
+            ]
+        ]
+    },
+    {
+        "id": "3aa01fb4.a58eb",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "func": "var x = msg.count;\nif (x == 6)\n{\n    msg.reset = true;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 1120,
+        "wires": [
+            [
+                "e1e1a74a.8fcd18"
+            ]
+        ]
+    },
+    {
+        "id": "9efe8fd6.0e3ff",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "3668acf1.b579a4",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "To flow variables I3",
+        "func": "flow.set('Input3', msg.payload) //Converted to Integer\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62b27f98.46529",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "To flow variables I4",
+        "func": "flow.set('Input4', msg.count) //Converted to Integer\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "127ff88f.060527",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "To flow variables I7",
+        "func": "flow.set('Input7', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf26b712.0ad878",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "To flow variables I8",
+        "func": "flow.set('Input8', msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "607575fe.8fac5c",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "Warning: Change values at your own risk",
+        "info": "",
+        "x": 200,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "32249f80.e2c61",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "37658c9e.989ed4"
+            ]
+        ]
+    },
+    {
+        "id": "37658c9e.989ed4",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "set flow context Inputs I5 & I6",
+        "func": "// flow.set('isoInput1', Math.random() + 11.0) interval comes from server\nflow.set('Input5', Math.random() + 15.0) //Float\nflow.set('Input6', Math.random() + 16.0) //Float\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 740,
+        "wires": [
+            [
+                "b0737b6a.b46238"
+            ]
+        ]
+    },
+    {
+        "id": "b0737b6a.b46238",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 670,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "719f67ed.a20808",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "set flow context Outputs",
+        "func": "// flow.set for Outputs\nflow.set('Output2', Math.random() + 2.0)\nflow.set('Output3', Math.random() + 3.0)\nflow.set('Output4', Math.random() + 4.0)\nflow.set('Output5', Math.random() + 5.0)\nflow.set('Output6', Math.random() + 6.0)\nflow.set('Output7', Math.random() + 7.0)\nflow.set('Output8', Math.random() + 8.0)\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ff1b2bc.9babf",
+        "type": "inject",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "719f67ed.a20808",
+                "5e111b25.3cd3d4",
+                "483d3a2b.19e594"
+            ]
+        ]
+    },
+    {
+        "id": "63bb191c.47bb98",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 610,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "5e111b25.3cd3d4",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "Read inputs",
+        "func": "msg.payload = [\n    flow.get('Input1'),\n    flow.get('Input2'),\n    flow.get('Input3'),\n    flow.get('Input4'),\n    flow.get('Input5'),\n    flow.get('Input6'),\n    flow.get('Input7'),\n    flow.get('Input8'),\n    flow.get('Input9'),\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1280,
+        "wires": [
+            [
+                "63bb191c.47bb98"
+            ]
+        ]
+    },
+    {
+        "id": "483d3a2b.19e594",
+        "type": "function",
+        "z": "27717c2.72cc384",
+        "name": "Read outputs",
+        "func": "msg.payload = [\n    flow.get('Output1'),\n    flow.get('Output2'),\n    flow.get('Output3'),\n    flow.get('Output4'),\n    flow.get('Output5'),\n    flow.get('Output6'),\n    flow.get('Output7'),\n    flow.get('Output8'),\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1340,
+        "wires": [
+            [
+                "90bec7ed.b15668"
+            ]
+        ]
+    },
+    {
+        "id": "90bec7ed.b15668",
+        "type": "debug",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 610,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "509a22a8.0833cc",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I1: Set in the server",
+        "info": "",
+        "x": 130,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1f05c69b.b2e429",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I5 ~ I6: Random float",
+        "info": "",
+        "x": 990,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "da28746f.0850e8",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "I8: String",
+        "info": "",
+        "x": 960,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "53224d2b.e66e14",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "Set random outputs",
+        "info": "",
+        "x": 650,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "fa965d8.98d9ca",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "Read inputs",
+        "info": "",
+        "x": 790,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "747c5790.ea9a68",
+        "type": "comment",
+        "z": "27717c2.72cc384",
+        "name": "Read outputs",
+        "info": "",
+        "x": 790,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "372b7352.897bec",
+        "type": "random",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "28d7300a.ef135",
+                "ae1b0dac.94e9f"
+            ]
+        ]
+    },
+    {
+        "id": "44269e84.e053b",
+        "type": "random",
+        "z": "27717c2.72cc384",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "6c283493.ddba2c"
+            ]
+        ]
+    },
+    {
+        "id": "4ba92de2.13f384",
+        "type": "opcua-compact-server",
+        "z": "27717c2.72cc384",
+        "port": 54845,
+        "endpoint": "",
+        "productUri": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "10",
+        "maxConnectionsPerEndpoint": "10",
+        "maxAllowedSubscriptionNumber": "100",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": true,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsetsOPCUA": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "1",
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerWrite": 1000,
+        "maxNodesPerHistoryReadData": 100,
+        "maxNodesPerBrowse": 3000,
+        "maxBrowseContinuationPoints": "10",
+        "maxHistoryContinuationPoints": "10",
+        "delayToInit": "1000",
+        "delayToClose": "200",
+        "serverShutdownTimeout": "100",
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = address space of the node-opcua server\n  // eventObjects = add event variables here to hold them in memory from this script\n\n  // internal sandbox objects are:\n  // node = the compact server node,\n  // coreServer = core compact server object for debug and access to NodeOPCUA\n  // this.sandboxNodeContext = node context node-red\n  // this.sandboxFlowContext = flow context node-red\n  // this.sandboxGlobalContext = global context node-red\n  // this.sandboxEnv = env variables\n  // timeout and interval functions as expected from nodejs\n\n  const opcua = coreServer.choreCompact.opcua;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n\n  const Variant = opcua.Variant;\n  const DataType = opcua.DataType;\n  const DataValue = opcua.DataValue;\n\n  var flexServerInternals = this;\n\n  this.sandboxFlowContext.set(\"Input1\", 0);\n \n this.setInterval(() => {\n    flexServerInternals.sandboxFlowContext.set(\n      \"Input1\",\n      Math.random() + 50.0\n    );\n  }, 500);\n  \n  this.sandboxFlowContext.set(\"Input2\", 0);\n  this.sandboxFlowContext.set(\"Input3\", 0);\n  this.sandboxFlowContext.set(\"Input4\", 0);\n  this.sandboxFlowContext.set(\"Input5\", 0);\n  this.sandboxFlowContext.set(\"Input6\", 0);\n  this.sandboxFlowContext.set(\"Input7\", false);\n  this.sandboxFlowContext.set(\"Input8\", \"0\");\n\n  this.sandboxFlowContext.set(\"Output1\", 0);\n  this.setInterval(() => {\n    flexServerInternals.sandboxFlowContext.set(\n      \"Output1\",\n      Math.random() + 10.0\n    );\n  }, 500);\n\n  this.sandboxFlowContext.set(\"Output2\", 0);\n  this.sandboxFlowContext.set(\"Output3\", 0);\n  this.sandboxFlowContext.set(\"Output4\", 0);\n  this.sandboxFlowContext.set(\"Output5\", 0);\n  this.sandboxFlowContext.set(\"Output6\", 0);\n  this.sandboxFlowContext.set(\"Output7\", 0);\n  this.sandboxFlowContext.set(\"Output8\", 0);\n\n  coreServer.debugLog(\"init dynamic address space\");\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn(\"construct new address space for OPC UA\");\n\n  const myDevice = namespace.addFolder(rootFolder.objects, {\n    \"browseName\": \"Node-RED OPC UA Simulation\"\n  });\n  const ioFolder = namespace.addFolder(myDevice, { \"browseName\": \"IO\" });\n  const Inputs = namespace.addFolder(ioFolder, {\n    \"browseName\": \"Inputs\"\n  });\n  const Outputs = namespace.addFolder(ioFolder, {\n    \"browseName\": \"Outputs\"\n  });\n\n  const DI1 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I1\",\n    \"nodeId\": \"ns=1;s=Input1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input1\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input1\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DI2 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I2\",\n    \"nodeId\": \"ns=1;s=Input2\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input2\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input2\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DI3 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I3\",\n    \"nodeId\": \"ns=1;s=Input3\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input3\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input3\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DI4 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I4\",\n    \"nodeId\": \"ns=1;s=Input4\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input4\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input4\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DI5 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I5\",\n    \"nodeId\": \"ns=1;s=Input5\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input5\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input5\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DI6 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I6\",\n    \"nodeId\": \"ns=1;s=Input6\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input6\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input6\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  //Boolean\n  const DI7 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I7\",\n    \"nodeId\": \"ns=1;s=Input7\",\n    \"dataType\": \"Boolean\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Boolean,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input7\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input7\",variant.value\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n  \n  const DI8 = namespace.addVariable({\n    \"organizedBy\": Inputs,\n    \"browseName\": \"I8\",\n    \"nodeId\": \"ns=1;s=Input8\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.String,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Input8\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Input8\",variant.value\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n \n\n  const DO1 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O1\",\n    \"nodeId\": \"ns=1;s=Output1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output1\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output1\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO2 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O2\",\n    \"nodeId\": \"ns=1;s=Output2\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output2\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output2\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO3 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O3\",\n    \"nodeId\": \"ns=1;s=Output3\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output3\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output3\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO4 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O4\",\n    \"nodeId\": \"ns=1;s=Output4\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output4\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output4\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO5 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O5\",\n    \"nodeId\": \"ns=1;s=Output5\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output5\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output5\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO6 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O6\",\n    \"nodeId\": \"ns=1;s=Output6\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output6\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output6\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO7 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O7\",\n    \"nodeId\": \"ns=1;s=Output7\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output7\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output7\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  const DO8 = namespace.addVariable({\n    \"organizedBy\": Outputs,\n    \"browseName\": \"O8\",\n    \"nodeId\": \"ns=1;s=Output8\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"get\": function() {\n        return new Variant({\n          \"dataType\": DataType.Double,\n          \"value\": flexServerInternals.sandboxFlowContext.get(\"Output8\")\n        });\n      },\n      \"set\": function(variant) {\n        flexServerInternals.sandboxFlowContext.set(\n          \"Output8\",\n          parseFloat(variant.value)\n        );\n        return opcua.StatusCodes.Good;\n      }\n    }\n  });\n\n  //------------------------------------------------------------------------------\n  // Add a view\n  //------------------------------------------------------------------------------\n  const viewDI = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Ins\"\n  });\n\n  const viewDO = namespace.addView({\n    \"organizedBy\": rootFolder.views,\n    \"browseName\": \"RPIW0-Digital-Outs\"\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI1.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI2.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI3.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI4.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI5.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI6.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI7.nodeId\n  });\n\n  viewDI.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DI8.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO1.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO2.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO3.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO4.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO5.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO6.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO7.nodeId\n  });\n\n  viewDO.addReference({\n    \"referenceType\": \"Organizes\",\n    \"nodeId\": DO8.nodeId\n  });\n\n  coreServer.debugLog(\"create dynamic address space done\");\n  node.warn(\"construction of new address space for OPC UA done\");\n\n  done();\n}\n",
+        "x": 170,
+        "y": 80,
+        "wires": []
+    }
+]
