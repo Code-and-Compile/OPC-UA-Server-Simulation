@@ -57,3 +57,9 @@ A[Arduino I/Os] --Reads via Serial--> B[Node-RED flow variables] --Write to vari
 graph LR
 A[PLC I/Os] --Reads via MODBUS--> B[Node-RED flow variables] --Write to variables--> C[OPC UA Server] 
 ```
+
+### Reading OPC UA variables using UaExpert
+![image](https://user-images.githubusercontent.com/48238929/210653141-4a3c6353-b4f4-4767-9188-c592ec87f44d.png)
+
+
+
