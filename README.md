@@ -2,7 +2,10 @@ OPC UA Server Simulation
 ====
 
 ## About repository
-In this repository you will find an example of OPC UA Server simulation where **Node-RED act as OPC UA Server**. Required node: https://flows.nodered.org/node/node-red-contrib-opcua-server 
+In this repository you will find an example of OPC UA Server simulation where **Node-RED act as OPC UA Server**. 
+Required nodes:
+- OPC UA Server: https://flows.nodered.org/node/node-red-contrib-opcua-server 
+- Counter https://flows.nodered.org/node/node-red-contrib-counter
 
 > This respository is part of **OPC UA Course** published at ✅
 > https://codeandcompile.com/course/learn-opc-ua-with-node-red
